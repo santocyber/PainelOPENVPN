@@ -31,6 +31,10 @@ Painel web single-file em Flask para gerenciar conexões OpenVPN client via syst
 ## Instalação
 
 ```bash
+# Clonar o repositório
+git clone https://github.com/santocyber/PainelOPENVPN.git
+cd PainelOPENVPN
+
 # Instalar dependências de sistema (iptables, iproute2, OpenVPN)
 sudo apt update
 sudo apt install -y iptables iproute2 openvpn
@@ -38,7 +42,7 @@ sudo apt install -y iptables iproute2 openvpn
 # Instalar dependências Python
 pip install flask
 
-# Clonar ou copiar o arquivo
+# Copiar para diretório de instalação (opcional)
 sudo cp openVPN.py /opt/openvpn-panel/
 sudo chmod +x /opt/openvpn-panel/openVPN.py
 ```
