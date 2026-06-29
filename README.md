@@ -2,6 +2,12 @@
 
 Painel web single-file em Flask para gerenciar conexões OpenVPN client via systemd, com controle de NAT/iptables para compartilhamento de internet em dois modos: **através da VPN** ou **internet normal (bypassando a VPN)**.
 
+## Screenshots
+
+| Login | Dashboard |
+|-------|-----------|
+| ![Tela de login](screenshots/login.png) | ![Dashboard principal](screenshots/dashboard.png) |
+
 ## Funcionalidades
 
 - Upload de configurações `.ovpn`/`.conf` e arquivos auxiliares (crt, key, pem, p12, auth) — inclusive via `.zip`
