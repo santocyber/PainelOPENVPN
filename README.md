@@ -4,9 +4,7 @@ Painel web single-file em Flask para gerenciar conexões OpenVPN client via syst
 
 ## Screenshots
 
-| Login | Dashboard |
-|-------|-----------|
-| ![Tela de login](screenshots/login.png) | ![Dashboard principal](screenshots/dashboard.png) |
+![Dashboard principal](screenshots/dashboard.png)
 
 ## Funcionalidades
 
@@ -33,13 +31,19 @@ Painel web single-file em Flask para gerenciar conexões OpenVPN client via syst
 ## Instalação
 
 ```bash
+# Instalar dependências de sistema (iptables, iproute2, OpenVPN)
+sudo apt update
+sudo apt install -y iptables iproute2 openvpn
+
 # Instalar dependências Python
 pip install flask
 
 # Clonar ou copiar o arquivo
-cp openVPN.py /opt/openvpn-panel/
-chmod +x /opt/openvpn-panel/openVPN.py
+sudo cp openVPN.py /opt/openvpn-panel/
+sudo chmod +x /opt/openvpn-panel/openVPN.py
 ```
+
+> **Nota:** O OpenVPN já instala o template systemd `openvpn-client@.service` necessário para o painel gerenciar as conexões. Verifique com `systemctl list-unit-files | grep openvpn-client`.
 
 ## Configuração via variáveis de ambiente
 
